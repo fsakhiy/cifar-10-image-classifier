@@ -82,7 +82,7 @@ if image is not None:
     if compare_both and len(model_options) >= 2:
         st.markdown("---")
         st.subheader("Perbandingan Hasil Model")
-        
+
         # Load kedua model
         m_base = load_model(model_options["Model Sebelum Optimasi (Baseline)"])
         m_opt = load_model(model_options["Model Sesudah Optimasi"])
@@ -92,14 +92,14 @@ if image is not None:
 
         c1, c2 = st.columns(2)
         with c1:
-            st.markdown("### 📌 Sebelum Optimasi")
+            st.markdown("### Sebelum Optimasi (baseline)")
             st.write(f"**Prediksi:** {pred_base_label}")
             st.write(f"**Keyakinan:** {conf_base:.2f}%")
             df_base = pd.DataFrame({"Probabilitas": probs_base}, index=CLASSES)
             st.bar_chart(df_base)
 
         with c2:
-            st.markdown("### 🚀 Sesudah Optimasi")
+            st.markdown("### Sesudah Optimasi")
             st.write(f"**Prediksi:** {pred_opt_label}")
             st.write(f"**Keyakinan:** {conf_opt:.2f}%")
             df_opt = pd.DataFrame({"Probabilitas": probs_opt}, index=CLASSES)
@@ -112,7 +112,7 @@ if image is not None:
         st.markdown("---")
         st.subheader(f"Hasil Prediksi ({selected_model_name})")
         st.write(f"**Prediksi:** {label}")
-        st.write(f"**Tingkat Keyakinan:** {confidence:.2f}%")
+        st.write(f"**Tingkat Confidence:** {confidence:.2f}%")
 
         st.write("Distribusi Probabilitas Tiap Kelas:")
         df = pd.DataFrame({"Probabilitas": probs}, index=CLASSES)
