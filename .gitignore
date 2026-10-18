@@ -1,2 +1,15 @@
-__pycache__/
+# Virtual environment
 .venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS / Editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
