@@ -1,10 +1,8 @@
 # CIFAR-10 CNN Image Classifier Web UI
 
-A Streamlit web application that lets you upload or select external images to be classified by your trained Convolutional Neural Network (CNN) `.keras` model.
-
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Using Make (Universal - Windows, macOS, Linux)
 
@@ -55,13 +53,3 @@ streamlit run app.py
 ```
 
 The app will open automatically in your browser at `http://localhost:8501`.
-
----
-
-## 🎨 Features
-
-- **Side-by-Side Resolution Inspector**: Real-world images are resized to 32×32 pixels to match the CIFAR-10 CNN input. The app displays both the full-resolution uploaded image and the 32×32 pixelated view that the CNN evaluates.
-- **Top Prediction Metric**: Highlights the predicted category with emoji and confidence percentage.
-- **Interactive Probabilities Breakdown**: Displays a real-time horizontal bar chart of all 10 CIFAR-10 classes (`airplane`, `automobile`, `bird`, `cat`, `deer`, `dog`, `frog`, `horse`, `ship`, `truck`).
-- **Sample Images Included**: Pre-loaded external images in `samples/` for one-click testing without having to search for images online.
-```
